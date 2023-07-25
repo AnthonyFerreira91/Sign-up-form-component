@@ -1,0 +1,55 @@
+*, ::before, ::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	padding: 9.5rem 0 0 0;
+	text-align: center;
+	font-size: 1.6rem;
+	background-image: url("/assets/bg-intro-mobile.png");
+	background-color: $ColorPrimary1;
+	background-repeat: repeat;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.colorPrimary1 {
+	color: $ColorPrimary1;
+}
+
+@media screen and (min-width: $Desktop) {
+	body {
+		height: 100vh;
+		padding: 0;
+		background-image: url('/assets/bg-intro-desktop.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	#root {
+		height: 100%;
+	}
+	.app {
+		flex-grow: 1;
+		flex-direction: row;
+		justify-content: center;
+	}
+}
